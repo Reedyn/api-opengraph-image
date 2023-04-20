@@ -78,7 +78,9 @@ async function handler(event, context) {
   try {
     // output to Function logs
     let maxWidth = IMAGE_WIDTH;
-    if(size === "small") {
+    if(size === "tiny") {
+      maxWidth = 150;
+    } else if(size === "small") {
       maxWidth = 375;
     } else if(size === "medium") {
       maxWidth = 650;
